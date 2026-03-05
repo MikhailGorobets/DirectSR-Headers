@@ -18,5 +18,5 @@ extern "C"
 
 extern "C"
 {
-    __declspec(dllexport) extern const char8_t* D3D12SDKPath = u8"" DIRECTSR_D3D12_SDK_PATH;
+    __declspec(dllexport) extern const char* D3D12SDKPath = DIRECTSR_D3D12_SDK_PATH;
 }
