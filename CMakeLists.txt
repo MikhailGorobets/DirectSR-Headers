@@ -29,6 +29,7 @@ target_include_directories(DirectSR-Headers INTERFACE "${CMAKE_CURRENT_SOURCE_DI
 
 # --- DirectSR-AgilitySDK: OBJECT library exporting D3D12SDKVersion / D3D12SDKPath ---
 add_library(DirectSR-AgilitySDK OBJECT "${CMAKE_CURRENT_SOURCE_DIR}/src/D3D12AgilitySDK.cpp")
+set_target_properties(DirectSR-AgilitySDK PROPERTIES EXCLUDE_FROM_ALL TRUE)
 target_compile_definitions(DirectSR-AgilitySDK PRIVATE
     DIRECTSR_D3D12_SDK_VERSION=${DIRECTSR_SDK_VERSION}
     "DIRECTSR_D3D12_SDK_PATH=\"${DIRECTSR_SDK_PATH}\""
